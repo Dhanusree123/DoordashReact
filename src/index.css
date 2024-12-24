@@ -105,10 +105,10 @@
   padding-right: 150px;
   text-align:left;
   justify-content: center;
-  height: 70vh;
+  height: 55vh;
 }
 .groceries-card{
-  background-image: url('src\assets\img41.png');
+  background-image: url('./assets/img41.png');
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -145,6 +145,7 @@
 .Dash-pass-card{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   display: flex;
+  height: 70vh;
   padding-left: 150px;
   padding-right: 150px;
   text-align:left;
@@ -158,7 +159,7 @@
   text-align:left;
   align-items:center;
 }
-.shopnow-button,.groceries-button,.pass-btn,.crave-button{
+.shop-button,.groceries-button,.pass-btn,.crave-button{
   background-color: rgb(222, 51, 51);
   border-radius: 20px;
   border:none;
@@ -166,9 +167,17 @@
   padding:10px;
   font-weight: bold;
 }
-.shopnow-button:hover,.groceries-button:hover,.pass-btn:hover,.crave-button:hover{
+.shop-button:hover,.groceries-button:hover,.pass-btn:hover,.crave-button:hover{
   background-color: rgb(200, 51, 51);
 } 
+.butt-sec2{
+  border:none;
+  color:tomato;
+  background-color: white;
+  font-size: 100%;
+  padding:10px;
+  font-weight: bold;
+}
 
 .helpingCard {
   background-color: white;

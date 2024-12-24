@@ -8,7 +8,7 @@
                 <div>
                     <h1>{props.head}</h1>
                     <p>{props.para}</p>
-                    <button>{props.hbutton}</button>
+                    <button className="butt-sec2">{props.hbutton}</button>
                 </div>
             </div>
         </div>

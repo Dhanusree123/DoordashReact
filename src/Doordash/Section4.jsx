@@ -1,5 +1,6 @@
 
 function Section4(){
+    return(
     <div className="Dash-pass-card">
                 <div className="Dash-pass-pic">
                     <img src="src\assets\doorpass.webp" width='550px' height='350px'/>
@@ -10,6 +11,7 @@ function Section4(){
                     <button className="pass-btn">Get DashPass</button>
                 </div>
             </div>
+    );
     }
     
     export default Section4
