@@ -7,6 +7,15 @@ import Mobile from './assets/phonepic.jpg';
 import Section4 from './Doordash/Section4.jsx';
 import Section5 from './Doordash/Section5.jsx';
 import Section6 from './Doordash/Section6.jsx';
+import TodoGifts from "./components/TodoGifts";
+import DeliveryImage from "./assets/Delivery_p.jpg";
+import FlowersImage from "./assets/flowers.jpg";
+import WineImage from "./assets/wine.jpg";
+import PetImage from "./assets/Pet.webp";
+import Opportunity from "./components/Opportunity";
+import Grow from "./components/Grow";
+import Footer from "./components/Footer";
+
 
 
 
@@ -17,6 +26,38 @@ const hValues = [
 ]
 
 function App(){
+
+  const todoGift = [
+    {
+      images: DeliveryImage,
+      helpingHeading: "Return packages from home",
+      helpingParagraph:
+        "Request a package pickup with just a few taps and get your returns dropped off at carriers like UPS, FedEx, and USPS.",
+      helpingButton: "Try Package Pickup",
+    },
+    {
+      images: FlowersImage,
+      helpingHeading: "Flowers for any occasion",
+      helpingParagraph:
+        "Shop hand-picked and thoughtfully-arranged blooms from florists near you.",
+      helpingButton: "Send Flowers",
+    },
+    {
+      images: WineImage,
+      helpingHeading: "Restock the minibar",
+      helpingParagraph:
+        "Hosting a get-together or need or need a special cocktail ingredient? Get liquor, beer, mixers, champagne and wine delivered fast.*",
+      helpingButton: "Shop Alcohol",
+    },
+    {
+      images: PetImage,
+      helpingHeading: "What your pets need, and want",
+      helpingParagraph:
+        "Finally, something cat people and dog people agree on — pet supplies delivery. Shop pet food, chew toys, and even costumes.",
+      helpingButton: "Get Pet Supplies",
+    },
+  ];
+
 
   return(<>
     <Header />;
@@ -38,6 +79,41 @@ function App(){
     <Section4 />
     <Section5 />
     <Section6 />
+
+    <div className="helping">
+        <h1 className="helpingSection">
+          Helping you with to-dos and <br />
+          gifting
+        </h1>
+        <div className="helpingSectionCard">
+          {todoGift.map((item) => (
+            <TodoGifts
+              key={item.helpingHeading}
+              images={item.images}
+              helpingHeading={item.helpingHeading}
+              helpingParagraph={item.helpingParagraph}
+              helpingButton={item.helpingButton}
+            />
+          ))}
+        </div>
+      </div>
+
+      <Opportunity
+        Images="src\assets\img7.avif"
+        opportunityHeading="Sign up to dash and get paid"
+        opportunityParagraph="Deliver with one of the best Food and Drink apps in Australia. As a delivery driver, you'll make money and work on your schedule. Sign up in minutes."
+        opportunityButton="Become a Dasher"
+      />
+
+      <Grow
+        Images="src\assets\img8.avif"
+        GrowHeading="Grow your business with DoorDash"
+        GrowParagraph="Businesses large and small partner with DoorDash to reach new customers, increase order volume, and drive more sales."
+        GrowButton="Become a Partner"
+      />
+
+      <Footer />
+    
   </>);
 }  
 export default App
