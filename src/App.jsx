@@ -61,7 +61,7 @@ function App(){
 
   return(<>
     <Header />;
-    
+    <div className="section2">
     {hValues.map((hval) => (
       <Section2
       key = {hval.heading}
@@ -74,6 +74,8 @@ function App(){
       hheight = {hval.height}
     />
     ))}
+    </div>
+    
 
     <Section3 />
     <Section4 />
